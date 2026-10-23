@@ -71,7 +71,7 @@ customer-churn-prediction/
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/aidinpho/customer-churn-prediction.git
 cd customer-churn-prediction
 ```
 
