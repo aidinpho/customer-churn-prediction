@@ -47,6 +47,7 @@ These results come from a single stratified train/validation/test split. They do
 
 ```text
 customer-churn-prediction/
+|-- app.py
 |-- data/
 |   `-- iranian_churn.csv
 |-- models/
@@ -89,6 +90,27 @@ Install the dependencies:
 ```bash
 python -m pip install -r requirements.txt
 ```
+
+## Web Application
+
+This project includes a Streamlit web application that allows users to enter customer information and estimate churn risk through an interactive interface.
+
+The application displays:
+- Estimated churn probability
+- The model's decision threshold
+- The predicted churn-risk classification
+
+### Run the Web App
+
+From the project root, activate your virtual environment and run:
+
+```bash
+python -m streamlit run app.py
+```
+
+Streamlit will start a local web server. Open the local URL displayed in the terminal to use the application.
+
+The web app uses the saved Random Forest model and decision threshold from the `models/` directory.
 
 ## Run a Prediction
 
@@ -134,3 +156,4 @@ Feature importance describes how the fitted model uses features; it does not est
 - scikit-learn
 - joblib
 - pytest
+- Streamlit
