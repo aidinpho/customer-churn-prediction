@@ -1,6 +1,36 @@
 # Customer Churn Prediction
 
-A machine learning project that predicts whether a telecom customer is likely to churn using customer behavior and subscription data.
+A machine learning project that predicts customer churn using telecom customer behavior and subscription data.
+
+**🚀 Live Demo:** [Try the Web Application](https://customer-churn-prediction-2ueekxsoanbmgyxl5x7jbu.streamlit.app/)
+
+**💻 Source Code:** [View the GitHub Repository](https://github.com/aidinpho/customer-churn-prediction)
+
+## Key Features
+
+- Compare multiple machine learning classification models.
+- Predict customer churn using a trained Random Forest model.
+- Estimate churn probability and classify customers based on a decision threshold.
+- Validate customer inputs before making predictions.
+- Explore model performance using precision, recall, F1-score, and accuracy.
+- Run automated tests to verify prediction and input-validation behavior.
+
+
+## Screenshots
+
+### Customer Information Form
+
+![Customer Churn Prediction — Customer Information Form](screenshots/app-form.png)
+
+### Prediction Results
+
+![Customer Churn Prediction — Prediction Results](screenshots/prediction-result.png)
+
+## Live Demo
+
+Try the deployed application:
+
+[**Open Customer Churn Prediction App**](https://customer-churn-prediction-2ueekxsoanbmgyxl5x7jbu.streamlit.app/)
 
 ## Project Overview
 
