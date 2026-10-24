@@ -32,6 +32,16 @@ Try the deployed application:
 
 [**Open Customer Churn Prediction App**](https://customer-churn-prediction-2ueekxsoanbmgyxl5x7jbu.streamlit.app/)
 
+## Feature Importance
+
+The chart below shows the relative feature importance values calculated by the trained Random Forest model.
+
+![Random Forest Feature Importance](screenshots/feature-importance.png)
+
+The model assigned the highest importance to `Frequency of use`, `Seconds of Use`, `Complains`, and `Customer Value`.
+
+Feature importance describes how the model uses input features. It does not establish that these features cause customer churn.
+
 ## Project Overview
 
 Customer churn occurs when a customer stops using a service. Predicting churn can help businesses identify customers who may need additional support or retention offers.

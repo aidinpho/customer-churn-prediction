@@ -1,12 +1,12 @@
 
 from pathlib import Path
-
+import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "iranian_churn.csv"
-
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 def main():
     df = pd.read_csv(DATA_PATH)
@@ -63,6 +63,32 @@ def main():
             formatters={"Importance": "{:.4f}".format},
         )
     )
+
+    importance_df = importance_df.sort_values(
+        by="Importance",
+        ascending=True,
+    )
+
+    plt.figure(figsize=(10, 7))
+
+    plt.barh(
+        importance_df["Feature"],
+        importance_df["Importance"],
+    )
+
+    plt.xlabel("Feature Importance")
+    plt.ylabel("Feature")
+    plt.title("Random Forest Feature Importance")
+    plt.tight_layout()
+
+    output_dir = PROJECT_ROOT / "screenshots"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    output_path = output_dir / "feature-importance.png"
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    plt.close()
+
+    print(f"\nFeature importance chart saved to: {output_path}")
 
 
 if __name__ == "__main__":
